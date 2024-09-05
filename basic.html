@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript basics</title>
+</head>
+
+<body>
+    <h1>Javascript basics</h1>
+    <ul>
+        <li>Spring</li>
+        <li>Summer</li>
+        <li>Fall</li>
+        <li>Winter</li>
+    </ul>
+    <script>
+        const map = new Map()
+        map.set("name","John")
+        map.set("lastName", "Mircha")
+        map.set("age", 9)
+
+        console.log(map)
+        console.log(map.size)
+
+        console.log(map.has("email"))
+        console.log(map.has("name"))
+
+        console.log(map.get("name"))
+        map.set("name", "Jonathan")
+
+        console.log(map.get("name"))
+        map.delete("lastName")
+        console.log(map)
+
+        map.set(19, "value")
+        map.set(false,"false")
+        map.set({}, {})
+        for (let [key, value] of map) {
+            console.log(key, value)
+        }
+
+        const map2 = new Map([
+            ["name", "Kenai"],
+            ["age", 4],
+            ["animal", "dog"],
+            [null, "null"]
+        ])
+
+        console.log(map2)
+
+        const keysMap2 = [...map2.keys()]
+        const valuesMap2 = [...map2.values()]
+
+        console.log(keysMap2, valuesMap2)
+    </script>
+</body>
+
+</html>
